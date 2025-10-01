@@ -3,27 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Site</title>
+    <title>JobPortal</title>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-gray-100 text-gray-800 font-sans">
 
     <!-- Navbar -->
-    <nav class="bg-white shadow-md">
+    <nav class="bg-gray-800 shadow-md">
         <div class="max-w-7xl mx-auto px-4 py-3 flex justify-between items-center">
             <!-- Logo / Title -->
-            <div class="text-xl font-bold text-blue-600">
+            <div class="text-xl font-bold text-white">
                 JobPortal
             </div>
 
             <!-- Links -->
-           <div class="ml-10 flex items-baseline space-x-4">
-    <x-nav-link href="/" :active="request()->is('/')">Home</x-nav-link>
-    <x-nav-link href="/about" :active="request()->is('about')">About</x-nav-link>
-    <x-nav-link href="/contact" :active="request()->is('contact')">Contact</x-nav-link>
-</div>
-
+            <div class="ml-10 flex items-baseline space-x-4">
+                <x-nav-link href="/" :active="request()->is('/')">Home</x-nav-link>
+                <x-nav-link href="/jobs" :active="request()->is('jobs')">Jobs</x-nav-link>
+            </div>
         </div>
     </nav>
 
