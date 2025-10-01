@@ -7,10 +7,10 @@ Route::get('/', function () {
     return view('home');
 });
 
-// All Jobs
+// All Jobs with Eager Loading + Pagination
 Route::get('/jobs', function () {
     return view('jobs', [
-        'jobs' => Job::all()
+        'jobs' => Job::with('employer')->paginate(10) // eager load + paginate
     ]);
 });
 
