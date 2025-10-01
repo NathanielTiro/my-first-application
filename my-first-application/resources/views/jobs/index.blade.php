@@ -3,6 +3,14 @@
         Jobs Page
     </x-slot:heading>
 
+    <!-- Create Job Button -->
+    <div class="flex justify-end mb-4">
+        <a href="{{ route('jobs.create') }}" 
+           class="px-4 py-2 bg-indigo-600 text-white rounded hover:bg-indigo-500">
+           Create Job
+        </a>
+    </div>
+
     <div class="space-y-4">
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             @foreach ($jobs as $job)
